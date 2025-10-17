@@ -3,11 +3,17 @@ package com.example.demo;
 
 import com.example.demo.model.Todo;
 import org.junit.jupiter.api.Test;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class TodosStorageServiceTest {
+
+    private TodosApiImpl underTest;
 
     @Test
     void todosCreate_setsIdAndStoresTodo() {

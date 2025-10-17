@@ -19,9 +19,7 @@ public class TodosStorageService {
         return new ArrayList<>(todoStorage.values());
     }
 
-    public Todo todosIdGet(Integer id) {
-        return todoStorage.get(id);
-    }
+    public Todo todosIdGet(Integer id) { return todoStorage.get(id); }
 
     public void todosCreate(Todo todo) {
         int newId = currentId.getAndIncrement();
@@ -36,4 +34,5 @@ public class TodosStorageService {
     public Todo todosDelete(Integer id) {
         return todoStorage.remove(id);
     }
+
 }
