@@ -3,6 +3,13 @@ name: Maven Build
 on:
   push:
   pull_request:
+env:
+  REGISTRY: ghcr.io
+
+permissions:
+   contents: read
+   packages: write
+
 
 jobs:
   build:
@@ -46,5 +53,7 @@ jobs:
       - name: Build Docker image
         uses: whoan/docker-build-with-cache-action@v8
         with:
-           image_name: dominikrex/se-konzepte
-           push_image_and_stages: false
+          username: dominikrex
+          password: "${{ secrets.GITHUB_TOKEN }}"
+          registry: ${{ env.REGISTRY }}
+          image_name: dominikrex/se-konzepte
