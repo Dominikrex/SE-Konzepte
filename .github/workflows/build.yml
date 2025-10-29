@@ -46,5 +46,5 @@ jobs:
       - name: Build Docker image
         uses: whoan/docker-build-with-cache-action@v8
         with:
-           image_name: Dominikrex/SE-Konzepte
+           image_name: Dominikrex/se-konzepte
            push_image_and_stages: false
