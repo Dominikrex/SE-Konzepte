@@ -42,3 +42,9 @@ jobs:
           name: failsafe-reports
           path: '**/target/failsafe-reports/**'
           if-no-files-found: ignore
+
+      - name: Build Docker image
+        uses: whoan/docker-build-with-cache-action@v8
+        with:
+           image_name: Dominikrex/SE-Konzepte
+           push_image_and_stages: false
