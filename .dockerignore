@@ -1,5 +1,4 @@
 .git
-target
 build
 node_modules
 Dockerfile
