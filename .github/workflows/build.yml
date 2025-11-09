@@ -4,13 +4,13 @@ on:
   push:
   pull_request:
 
+
+env:
+  REGISTRY: ghcr.io
+
 permissions:
    contents: read
    packages: write
-
-env:
-    REGISTRY: ghcr.io
-
 
 jobs:
   build:
